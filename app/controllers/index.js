@@ -6,6 +6,7 @@ var UIView = require('UIKit/UIView'),
 	UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis = require('UIKit/UIInterpolatingMotionEffect').UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis,
 	UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis = require('UIKit/UIInterpolatingMotionEffect').UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis;
 		
+// Set min/max bounds		
 var xTilt = UIInterpolatingMotionEffect.alloc().initWithKeyPathType( "center.x", UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis);
 xTilt.minimumRelativeValue = -30.0;
 xTilt.maximumRelativeValue = 30.0;	
@@ -14,11 +15,14 @@ var yTilt = UIInterpolatingMotionEffect.alloc().initWithKeyPathType("center.y", 
 yTilt.minimumRelativeValue = -30.0;
 yTilt.maximumRelativeValue = 30.0;	
 
+// Group both horizontal and vertical effect so we can apply them together.
 var group = new UIMotionEffectGroup();
 var effects = new NSMutableArray();
 effects.addObject(xTilt);
 effects.addObject(yTilt);
 group.motionEffects = effects;
+
+// Apply to each view on the screen
 
 var icon1Native = UIView.cast($.icon1);
 icon1Native.addMotionEffect(group);
