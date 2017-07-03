@@ -1,0 +1,16 @@
+<Alloy>
+	<Window class="container">
+		<View id="icon1" class="parallax_icon">
+			
+		</View>
+		<View id="icon2" class="parallax_icon">
+			
+		</View>
+		<View id="icon3" class="parallax_icon">
+			
+		</View>
+		<View id="icon4" class="parallax_icon">
+			
+		</View>		
+	</Window>
+</Alloy>

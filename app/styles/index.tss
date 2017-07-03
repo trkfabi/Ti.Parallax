@@ -1,0 +1,33 @@
+".container": {
+	backgroundColor:"white"
+}
+
+".parallax_icon":{
+	height: 50,
+	width: 50,
+	borderRadius: 10
+}
+
+"#icon1":{
+	backgroundColor: 'red',
+	top: 70,
+	left: 30
+}
+
+"#icon2":{
+	backgroundColor: 'blue',
+	top: 60,
+	right: 40
+}
+
+"#icon3":{
+	backgroundColor: 'yellow',
+	top: 160,
+	left: 50
+}
+
+"#icon4":{
+	backgroundColor: 'green',
+	top: 280,
+	left: 200
+}
